@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        var audio = new Audio('music.mp3');
+        audio.play();
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+        .anton-regular {
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f48dd5]">
+    <div class="h-screen flex items-center justify-center bg-[url(hearts-bg.gif)]">
+        <div class="relative grid m-30 border-4 border-purple-500 rounded-xl bg-[#f44ec2] shadow-xl">
+            <p class="text-center font-bold text-4xl">Yippeeeeeeee, correct answer!</p>
+            <div class="grid grid-cols-3">
+                <img src="cat-silly.gif" class="h-50" />
+                <img src="danci-dancing-cat.gif" class="h-50" />
+                <img src="happy-cat-happy-happy-cat.gif" class="h-50" />
+            </div>
+            <img src="okito.webp" class="h-90 justify-self-center" />
+            <p class="justify-self-center anton-regular text-xl">Us @ Okito O' Grand Buffet</p>
+            <a href="verarscht.gif" type="button"
+                class="w-30 bg-[#f48dd5] border-4 border-purple-500 rounded-md hover:bg-[#d680bc] text-center absolute -bottom-5 -right-10">
+                Free $500 Shein Gift Card
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

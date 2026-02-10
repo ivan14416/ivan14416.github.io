@@ -7,8 +7,33 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <h1 class="font-bold">Valentinse Day</h1>
+<body class="bg-[#f48dd5]">
+    <div class="h-screen flex items-center justify-center bg-[url(hearts-bg.gif)]">
+        <div class="grid grid-row-3 min-w-200 m-30 h-130 border-4 border-purple-500 rounded-xl bg-[#f44ec2] shadow-xl">
+            <p class="text-center font-bold text-2xl">Will you be my Valentine?</p>
+            <img src="my-beloved.gif" class="justify-self-center rounded-md" />
+            <div class="grid grid-cols-2">
+                <a type="button" href="yes.html"
+                    class="w-30 pt-1 h-10 bg-[#f48dd5] border-4 border-purple-500 rounded-md hover:bg-[#d680bc] justify-self-end mr-2.5 text-center">Yes</a>
+                <button id="noButton" type="button"
+                    class="w-30 h-10 bg-[#f48dd5] border-4 border-purple-500 rounded-md hover:bg-[#d680bc] ml-2.5">No</button>
+            </div>
+        </div>
+    </div>
+    <img id="noImg" class="w-30 h-30 absolute" hidden/>
+    <script>
+        var noButton = document.getElementById('noButton');
+        var noImg = document.getElementById('noImg');
+        noButton.addEventListener("mouseover", (e)=>{
+            noImg.src = 'cat-shocked' + (Math.floor(Math.random()*10) + 1) + '.jpg';
+            noImg.hidden = false;
+            noImg.style.left = e.clientX - 40 + 'px' 
+            noImg.style.top = e.clientY - 40 + 'px'
+            noButton.style.position = 'absolute';
+            noButton.style.left = Math.floor(Math.random()*window.innerWidth-120) + 'px';
+            noButton.style.top = Math.floor(Math.random()*(window.innerHeight-40)) + 'px';
+        });
+    </script>
 </body>
 
 </html>
